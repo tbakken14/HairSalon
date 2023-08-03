@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using HairSalon.Models;
 
 namespace HairSalon
 {
@@ -10,6 +12,11 @@ namespace HairSalon
             WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<HairSalonContext>(
+                dbContextOptions => dbContextOptions.UseMySql(
+                    builder.Configuration["ConnectionStrings:DefaultConnection"],
+                    ServerVersion.AutoDetect(builder.Configuration["ConnectionStrings:DefaultConnection"])));
 
             WebApplication app = builder.Build();
 
