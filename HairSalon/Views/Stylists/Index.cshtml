@@ -11,7 +11,11 @@
     <h3>No stylists on staff at this time.</h3>
 }
 
+<h3>Stylists on staff</h3>
 @foreach (Stylist stylist in Model)
 {
     <p>@Html.ActionLink(stylist.Name, "Details", "Stylists", new {id = stylist.StylistId})</p>
 }
+
+<h3>Add a new hire</h3>
+<p>@Html.ActionLink("New Stylist", "New", "Stylists")</p>
