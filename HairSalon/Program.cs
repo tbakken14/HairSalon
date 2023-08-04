@@ -21,6 +21,7 @@ namespace HairSalon
             WebApplication app = builder.Build();
 
             app.UseStaticFiles();
+            app.UseHttpsRedirection();
             app.UseRouting();
 
             app.MapControllerRoute(

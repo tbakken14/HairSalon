@@ -6,7 +6,7 @@
 
 @model HairSalon.Models.Stylist
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Create", "Stylists"))
 {
     @Html.LabelFor(model => model.Name)
     @Html.TextBoxFor(model => model.Name)

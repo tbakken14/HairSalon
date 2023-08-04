@@ -17,9 +17,9 @@ namespace HairSalon.Controllers
             return View(_db.Stylists.ToList());
         }
 
-        public ActionResult Create()
+        public ActionResult New()
         {
-            return View();
+            return View("Create");
         }
 
         [HttpPost]
