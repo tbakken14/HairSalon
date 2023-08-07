@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using HairSalon.Models;
 
@@ -32,7 +33,9 @@ namespace HairSalon.Controllers
 
         public ActionResult Details(int id)
         {
-            Stylist stylist = _db.Stylists.FirstOrDefault(model => model.StylistId == id);
+            Stylist stylist = _db.Stylists
+                .Include(model => model.Clients)
+                .FirstOrDefault(model => model.StylistId == id);
             return View(stylist);
         }
     }
