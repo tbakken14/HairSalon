@@ -20,7 +20,6 @@ _A website for a hair salon to manage stylists and clients. The user can view an
 * _Install .NET SDK 6_
 * _Install MySQL Server_
 * _Install MySQL Workbench_
-
 * _Clone the repository_
 * _Import database to MySQL_
   * _Open MySQL Workbench_
@@ -31,12 +30,11 @@ _A website for a hair salon to manage stylists and clients. The user can view an
   * _Click New..._
   * _Input a database name_
   * _Start the import_
-
 * _In the bash command line:_
   * _Navigate to the top-level directory_
   * _Create appsettings.json with: touch appsettings.json_
     * _Open the file in a text editor and copy the following line_
-      * _\{"ConnectionStrings": \{"DefaultConnection": "Server=localhost;Port=3306;database=\[DB_NAME\];uid=\[USERNAME\];pwd=\[PASSWORD\];"\}\}
+      * _\{"ConnectionStrings": \{"DefaultConnection": "Server=localhost;Port=3306;database=\[DB_NAME\];uid=\[USERNAME\];pwd=\[PASSWORD\];"\}\}_
     * _Replace \[DB_NAME\] with your imported database name_
     * _Replace \[USERNAME\] with your mysql username_
     * _Replace DB_NAME with your mysql password_
