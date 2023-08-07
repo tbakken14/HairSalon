@@ -1,3 +1,27 @@
 body {
-    background-color: rgb(199, 194, 255);
+    background-image: linear-gradient(to right, rgb(212, 184, 255), rgb(255, 119, 119));
+    text-align: center;
+    font-family: cambria;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.white {
+    background-color: white;
+}
+
+.btn {
+    margin: 25px;
+    width: 150px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: rgb(206, 206, 206);
 }
