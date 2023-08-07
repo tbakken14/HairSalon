@@ -1,9 +1,9 @@
 @{
     Layout = "_Layout";
 }
-
-<h1>New Client</h1>
 <hr>
+<h2>New Client</h2>
+<br>
 @model HairSalon.Models.Client
 
 @using (Html.BeginForm("Create", "Clients"))
@@ -16,3 +16,4 @@
     <br>
     <input type="submit" value="Add new client" />
 }
+<hr>
